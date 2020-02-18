@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/web")
-public class WebServiceResource {
+public class WebServiceController {
 
     @Autowired
 	private RestTemplate restTemplate;
@@ -22,10 +22,11 @@ public class WebServiceResource {
     }
 
     @RequestMapping("/companydata/{companyId}")
-    public List getDataByID(@PathVariable("companyId") String companyId)
+    public Object[] getDataByID(@PathVariable("companyId") String companyId)
     {
-        Object[] forObject = restTemplate.getForObject("http://SCA-SERVICE/getcompany/" + companyId, Object[].class);
+        System.out.println("companyId="+companyId);
+        Object[] forObject = restTemplate.getForObject("http://sca-service/data/getcompany/" + companyId, Object[].class);
 
-        return null;
+        return forObject;
     }
 }

@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/data")
-public class PersistanceServiceResource {
+public class PersistanceServiceController {
 
     @Autowired
 	private RestTemplate restTemplate;
@@ -20,9 +20,10 @@ public class PersistanceServiceResource {
     private PersistanceService persistanceService;
 
     @RequestMapping("/savecompany/")
-    public List<CompanySchedule> saveCompanyData()
+    public int saveCompanyData()
     {
-        return null;
+        CompanySchedule companySchedule = new CompanySchedule();
+        return persistanceService.insertCompanyData(companySchedule);
     }
 
     @RequestMapping("/getcompany/{companyId}")

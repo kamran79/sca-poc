@@ -36,8 +36,8 @@ public class CompanySchedule {
         this.companyName = companyName;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getDate(Date date) {
+        return this.date;
     }
 
     public void setDate(Date date) {
@@ -52,7 +52,7 @@ public class CompanySchedule {
         this.fromTime = fromTime;
     }
 
-    public Date getToTime() {
+    public Date getToTime(Date date) {
         return toTime;
     }
 

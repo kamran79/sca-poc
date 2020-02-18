@@ -1,20 +1,29 @@
 package nz.co.telco.poc.service;
 import  nz.co.telco.poc.model.CompanySchedule;
+import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
+@Service
 public class PersistanceServiceImpl implements  PersistanceService {
     public int insertCompanyData(CompanySchedule companySchedule)
     {
+//        insert query
         return 0;
     }
     public List<CompanySchedule> getCompanyData(Long companyId)
     {
-        CompanySchedule companySchedule1 = new CompanySchedule();
-        companySchedule1.setCompanyID(1L);
-        companySchedule1.setCompanyName("ABC");
-        return Collections.singletonList(companySchedule1);
+        CompanySchedule companyScheduleLocal = new CompanySchedule();
+        companyScheduleLocal.setCompanyID(1L);
+        companyScheduleLocal.setCompanyName("ABC");
+        companyScheduleLocal.setCompanyID(1L);
+        companyScheduleLocal.setDate(new Date());
+        companyScheduleLocal.setToTime(new Date());
+        companyScheduleLocal.setFromTime(new Date());
+        companyScheduleLocal.setDescription("XYZ");
+        return Collections.singletonList(companyScheduleLocal);
     }
 }

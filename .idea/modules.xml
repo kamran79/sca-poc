@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/sca-persistance-service/sca-persistance-service.iml" filepath="$PROJECT_DIR$/sca-persistance-service/sca-persistance-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/sca-poc.iml" filepath="$PROJECT_DIR$/.idea/sca-poc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sca-web-service/sca-web-service.iml" filepath="$PROJECT_DIR$/sca-web-service/sca-web-service.iml" />
+    </modules>
+  </component>
+</project>

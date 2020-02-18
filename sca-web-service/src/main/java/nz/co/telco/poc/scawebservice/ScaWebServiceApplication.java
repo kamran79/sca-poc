@@ -2,6 +2,7 @@ package nz.co.telco.poc.scawebservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.ribbon.eureka.ConditionalOnRibbonAndEurekaEnabled;
 import org.springframework.context.annotation.Bean;
@@ -15,8 +16,9 @@ public class ScaWebServiceApplication {
 		SpringApplication.run(ScaWebServiceApplication.class, args);
 	}
 
+	@LoadBalanced
 	@Bean
 	public RestTemplate getRestTemplate() {
-		return  new RestTemplate();
+		return new RestTemplate();
 	}
 }
